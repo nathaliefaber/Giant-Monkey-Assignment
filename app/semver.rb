@@ -6,15 +6,15 @@ class Semver
       a2 = version2.split('.').map{|v| v.to_i}
       #splits the string into an array where the dot is, then transforms the array of string into an integer
   end
-  def < x
+  def smaller_than(a)
     (a1 <=> a2) < 0 #version1 > version2
   end
 
-  def > x
+  def bigger_than(a)
     (a1 <=> a2) > 0 # version1 > version2
   end
 
-  def == x
+  def equal(a)
     (a1 <=> a2) == 0 #version1 matches version 2
   end
 end
